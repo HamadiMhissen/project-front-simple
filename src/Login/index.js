@@ -7,9 +7,8 @@ import { Input, StyledLink } from "../styles.js";
 import { RotatingLines } from 'react-loader-spinner'
 import "./index.css";
 
-
-
 export default function Login() {
+  
   const titrePage = "Se connecter ";
   //const EMAIL_ERRONE = "adresse mail erronée, compte inexistant !";
   //const MOT_DE_PASSE_ERRONE = "Access Denied";
