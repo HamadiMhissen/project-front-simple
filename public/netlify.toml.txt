@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "https://unique-pavlova-90bbb4.netlify.app/"
+  to = "https://pj-sav-food-back-production.up.railway.app/api/clients/authentication/login"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
