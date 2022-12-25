@@ -25,12 +25,17 @@ const chargementAnimation = <RotatingLines
   width="56"
   visible={true}
 />
+    const headers = {
+      'Content-Type': 'application/json',
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  }
 
   async function handleSubmit(event) {
     event.preventDefault();
     setLoggedIn("en cours");
     axios
-        .post(`${URL_API_DEPLOY_CLIENT}/authentication/login`, { email: compte.email, mdp: compte.mdp })
+        .post(`${URL_API_DEPLOY_CLIENT}/authentication/login`, { email: compte.email, mdp: compte.mdp }, {headers})
         .then((response) => {
                 localStorage.setItem("token", response.data);
                 localStorage.setItem("username", compte.email);
